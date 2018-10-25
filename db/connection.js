@@ -1,9 +1,10 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
-mongoose.connect('process.env.mongodb://localhost/PicList').then(() => {
+mongoose.connect(process.env.MOGODB_URI).then(() => {
 console.log('Connected to MongoDB')
 })
 
-var something = require('dotenv').config();
 
 
 module.exports = mongoose
