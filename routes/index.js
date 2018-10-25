@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'PicList' });
 });
 
+
+
+
+
+
 module.exports = router;
