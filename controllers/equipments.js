@@ -1,23 +1,25 @@
-const User = require('../models/User')
+const Event = require('../models/Event')
 const Equipment = require('../models/Equipment')
 
-const equipmentController = {
+const equipmentsController = {
     index: (req, res) => {
-        const userId = req.params.usersId
-        User.findById(userId).populate(`equipments`)
-            .then(user => {
-                console.log("USER", user)
-                const equipments = user.equipments
+    //     res.send('im working')
+    // }
+        const eventId = req.params.eventsId
+        Event.findById(eventId).populate(`equipments`)
+            .then(event => {
+                console.log("event", event)
+                const equipments = event.equipments
                 res.send(equipments)
             })
     },
     show: (req, res) =>{
         const equipmentId = req.params.equipmentsId
-        Item.findById(equipmentId)
+        Equipment.findById(equipmentId)
         .then(equipment =>{
             res.render('equipments/show', {equipment: equipment})
         })
     }
 }
 
-module.exports = equipmentController
+module.exports = equipmentsController

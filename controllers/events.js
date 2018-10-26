@@ -3,14 +3,22 @@ const Event = require('../models/Event')
 
 const eventsController = {
     index: (req, res) => {
-        const userId = req.params.usersId
-        User.findById(userId).populate(`events`)
-            .then(user => {
-                console.log("USER", user)
-                const events = user.events
-                res.send(events)
+        Event.find({}).populate('events')
+        .then((events) => {
+            res.render('events/index', {
+                events: events
             })
+        })
     },
+
+    //     const userId = req.params.usersId
+    //     User.findById(userId).populate(`events`)
+    //         .then(user => {
+    //             console.log("USER", user)
+    //             const events = user.events
+    //             res.send(events)
+    //         })
+    // },
     show: (req, res) =>{
         const eventId = req.params.eventsId
         Event.findById(eventId)

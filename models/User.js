@@ -8,6 +8,7 @@ const User = new Schema({
   },
   username: String,
   password: String,
+  image: String,
   events: [
     {
       type: Schema.Types.ObjectId,

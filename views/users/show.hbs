@@ -1,0 +1,10 @@
+<h1>Welcome To Your {{event.name}}</h1>
+<h2>You have the following items ready for purchase</h2>
+{{#each event.products}}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <a href="/users/{{../user._id}}/products/{{_id}}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{{/each}}

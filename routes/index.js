@@ -13,6 +13,7 @@ var router = express.Router();
 const applicationController = require('../controllers/application.js')
 const usersController = require('../controllers/users.js')
 const eventsController = require('../controllers/events.js')
+const equipmentsController = require('../controllers/equipments.js')
 
 //homepage
  router.get('/', applicationController.index)
@@ -28,6 +29,8 @@ router.get ('/events', eventsController.index)
 // router.patch('/events/:id', eventsController.update)
 // router.put('/events/:id', eventsController.update)
 // router.post ('/events/:id', eventsController.update)
+
+router.get('/equipments', equipmentsController.index)
 
 
 
