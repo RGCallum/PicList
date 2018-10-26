@@ -12,7 +12,7 @@ var router = express.Router();
 
 const applicationController = require('../controllers/application.js')
 const usersController = require('../controllers/users.js')
-const itemsController = require('../controllers/items.js')
+const eventsController = require('../controllers/events.js')
 
 //homepage
  router.get('/', applicationController.index)
@@ -22,12 +22,12 @@ const itemsController = require('../controllers/items.js')
  router.get('/users/:id', usersController.show)
 //  router.post('/users', userController.create) 
 
-router.get ('/items', itemsController.index)
-// router.get ('/items/new', itemsController.new)
-// router.get ('/items/:id', itemsController.show)
-// router.patch('/items/:id', itemsController.update)
-// router.put('/items/:id', itemsController.update)
-// router.post ('/items/:id', itemsController.update)
+router.get ('/events', eventsController.index)
+// router.get ('/events/new', eventsController.new)
+// router.get ('/events/:id', eventsController.show)
+// router.patch('/events/:id', eventsController.update)
+// router.put('/events/:id', eventsController.update)
+// router.post ('/events/:id', eventsController.update)
 
 
 

@@ -1,9 +1,9 @@
 const User = require('../models/User')
-const Item = require('../models/Item')
+const Event = require('../models/Event')
 
 const usersController = {
     index: (req, res) => {
-        User.find({}).populate('items')
+        User.find({}).populate('events')
         .then((users) => {
             res.render('users/index', {
                 users: users
@@ -15,7 +15,7 @@ const usersController = {
     },
     show: (req, res) =>{
         const userId = req.params.usersId
-        User.findById(userId).populate('items')
+        User.findById(userId).populate('events')
         .then(user => {
             res.render('users/show', {user: user})
         })

@@ -8,10 +8,10 @@ const User = new Schema({
   },
   username: String,
   password: String,
-  items: [
+  events: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Item'
+      ref: 'Event'
     }
   ]
 })
