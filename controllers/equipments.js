@@ -3,15 +3,15 @@ const Equipment = require('../models/Equipment')
 
 const equipmentsController = {
     index: (req, res) => {
-    //     res.send('im working')
-    // }
-        const eventId = req.params.eventsId
-        Event.findById(eventId).populate(`equipments`)
-            .then(event => {
-                console.log("event", event)
-                const equipments = event.equipments
-                res.send(equipments)
+        Equipment.find({}).populate('equipments')
+        .then((equipments) => {
+            res.render('equipments/index', {
+                equipments: equipments
             })
+        })
+    },
+    new: (req, res) =>{
+        res.send('im working')
     },
     show: (req, res) =>{
         const equipmentId = req.params.equipmentsId

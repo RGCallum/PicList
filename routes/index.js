@@ -24,13 +24,15 @@ const equipmentsController = require('../controllers/equipments.js')
 //  router.post('/users', userController.create) 
 
 router.get ('/events', eventsController.index)
-// router.get ('/events/new', eventsController.new)
-// router.get ('/events/:id', eventsController.show)
+router.get ('/events/new', eventsController.new)
+router.get ('/events/:id', eventsController.show)
 // router.patch('/events/:id', eventsController.update)
 // router.put('/events/:id', eventsController.update)
 // router.post ('/events/:id', eventsController.update)
 
 router.get('/equipments', equipmentsController.index)
+router.get ('/equipments/new', eventsController.new)
+router.get ('/equipments/:id', eventsController.show)
 
 
 

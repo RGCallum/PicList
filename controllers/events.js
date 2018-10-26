@@ -11,14 +11,9 @@ const eventsController = {
         })
     },
 
-    //     const userId = req.params.usersId
-    //     User.findById(userId).populate(`events`)
-    //         .then(user => {
-    //             console.log("USER", user)
-    //             const events = user.events
-    //             res.send(events)
-    //         })
-    // },
+    new: (req, res) =>{
+        res.send('im working')
+    },
     show: (req, res) =>{
         const eventId = req.params.eventsId
         Event.findById(eventId)
