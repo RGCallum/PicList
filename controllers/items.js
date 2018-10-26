@@ -1,7 +1,7 @@
 const User = require('../models/User')
 const Item = require('../models/Item')
 
-const itemController = {
+const itemsController = {
     index: (req, res) => {
         const userId = req.params.usersId
         User.findById(userId).populate(`items`)
@@ -20,4 +20,4 @@ const itemController = {
     }
 }
 
-module.exports = itemController
+module.exports = itemsController
