@@ -6,6 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('app/index', { title: 'PicList' });
 });
 
+router.get('/users', function(req, res, next) {
+  res.render('users/index', { title: 'Users' });
+});
 
 
 
