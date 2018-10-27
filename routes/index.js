@@ -11,7 +11,7 @@ const equipmentsController = require('../controllers/equipments.js')
  router.get('/users', usersController.index)
  router.get('/users/new', usersController.new)
  router.get('/users/:id', usersController.show)
-//  router.post('/users', userController.create) 
+ router.post('/users', usersController.create) 
 
 router.get ('/events', eventsController.index)
 router.get ('/events/new', eventsController.new)

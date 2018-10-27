@@ -1,10 +1,61 @@
-<h1>Welcome To Your {{event.name}}</h1>
-<h2>You have the following items ready for purchase</h2>
-{{#each event.products}}
+<h1>Welcome To Your Profile{{user.username}}</h1>
+<h2>You have the following events coming up</h2>
+
+{{!-- {{#each user.events}}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <a href="/users/{{../user._id}}/products/{{_id}}" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">{{username}}</h5>
+    <a href="/users/{{../user._id}}/events/{{_id}}" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{{/each}}
+{{/each}} --}}
+
+<main>
+
+	<h2>You are viewing:
+
+		{{user.name}}
+
+	</h2>
+
+	<a href="/">Return to Home Page</a>
+
+	<div class="user-container-show">
+		<h2 id="user-name">
+
+				{{user.name}}
+
+		</h2>
+
+				<img src="{{user.img}}" />
+
+		<br>
+		<h3>Description:</h3>
+			<p>
+
+				{{user.description}}
+
+			</p><br>
+		<h3>Price:</h3>
+			<p id="cost">$
+
+				{{user.price}} each</p><br>
+
+			<h3 id="quantity">
+
+	 				{{user.qty}} remaining
+
+			</h3>
+
+			<br>
+
+		  <a href="/{{user._id}}/edit">
+       <button> EDIT</button> </a>
+
+
+		</div>
+
+    <form action="/{{user._id}}?_method=DELETE" method="POST">
+      <button type="submit">DELETE</button>
+    </form>
+</main>

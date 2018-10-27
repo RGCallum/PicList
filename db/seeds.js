@@ -38,6 +38,14 @@ const reunion = new Event({
 
 })
 
+const anniversary = new Event({
+    name: "Turner Anniversary",
+    date: "04-20-19",
+    time: "8pm",
+    type: "reunion",
+    equipment: [camera, tripod]
+
+})
 
 const user1 = new User({
     email: "john@pics.com",
@@ -54,7 +62,7 @@ const user2 = new User({
 
 
 User.remove({})
-    .then(() => Event.insertMany([wedding, reunion]))
+    .then(() => Event.insertMany([wedding, reunion, anniversary]))
     .then(() => Equipment.insertMany([camera, lights, tripod]))
     .then(() => user1.save())
     .then(() => user2.save())

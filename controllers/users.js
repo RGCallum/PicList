@@ -11,7 +11,10 @@ const usersController = {
         })
     },
     new: (req, res) =>{
-        res.send('im working')
+        // res.send('im working')
+        User.create(req.body).then((newUser) => {
+            res.redirect(`/users/new/${newUser._id}`)
+          })
     },
     show: (req, res) =>{
         const userId = req.params.usersId
@@ -19,7 +22,32 @@ const usersController = {
         .then(user => {
             res.render('users/show', {user: user})
         })
-    }
+    },
+    create: (req, res) => {
+        User.create(req.body).then((newUser) => {
+          res.redirect(`/${newUser._id}`)
+        })
+      },
+    
+
+      edit: (req, res) => {
+        User.findById(req.params.id).then(user => {
+          res.render('users/edit', { user: user })
+        })
+      },
+
+      update: (req, res) => {
+        User.findByIdAndUpdate(req.params.id, req.body).then((updatedUser) => {
+          res.redirect(`/${updatedUser._id}`)
+        })
+      },
+
+      delete: (req, res) => {
+        User.findByIdAndRemove(req.params.id).then(() => {
+          res.redirect('/')
+        })
+      }
+    
 }
 
 module.exports = usersController
