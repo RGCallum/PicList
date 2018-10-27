@@ -3,7 +3,7 @@ const Event = require('../models/Event')
 
 const usersController = {
     index: (req, res) => {
-        User.find({}).populate('events')
+        User.find({}).populate('users')
         .then((users) => {
             res.render('users/index', {
                 users: users
