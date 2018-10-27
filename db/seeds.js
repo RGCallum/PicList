@@ -21,6 +21,40 @@ const tripod = new Equipment({
     image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
 })
 
+const lenses = new Equipment({
+    name: "lenses",
+    image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+})
+
+const reflector = new Equipment({
+    name: "reflector",
+    image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+})
+
+const printer = new Equipment({
+    name: "printer",
+    image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+})
+
+const cords = new Equipment({
+    name: "cords",
+    image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+})
+const sandbags = new Equipment({
+    name: "sandbags",
+    image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+})
+const backdrop = new Equipment({
+    name: "backdrop",
+    image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+})
+
+const gels = new Equipment({
+    name: "gels",
+    image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+})
+
+
 const wedding = new Event({
     name: "Johnson Wedding",
     date: "12-2-18",
@@ -47,6 +81,24 @@ const anniversary = new Event({
 
 })
 
+const formalParty = new Event({
+    name: "Wallace Sweet16",
+    date: "05-20-19",
+    time: "8pm",
+    type: "formalParty",
+    equipment: [camera, tripod]
+
+})
+
+const casualParty = new Event({
+    name: "Taylor 30th Birthday",
+    date: "08-20-19",
+    time: "8pm",
+    type: "casualParty",
+    equipment: [camera, tripod]
+
+})
+
 const user1 = new User({
     email: "john@pics.com",
     username: "Jpics",
@@ -62,8 +114,8 @@ const user2 = new User({
 
 
 User.remove({})
-    .then(() => Event.insertMany([wedding, reunion, anniversary]))
-    .then(() => Equipment.insertMany([camera, lights, tripod]))
+    .then(() => Event.insertMany([wedding, reunion, anniversary, casualParty, formalParty]))
+    .then(() => Equipment.insertMany([camera, lights, tripod, lenses, reflector, printer, cords, sandbags, backdrop, gels]))
     .then(() => user1.save())
     .then(() => user2.save())
     .then(() => console.log("Database seeded successfully"))

@@ -11,8 +11,8 @@ const User = new Schema({
   image: String,
   events: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'Event'
+      type: String
+  
     }
   ]
 })
