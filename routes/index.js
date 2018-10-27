@@ -21,8 +21,8 @@ router.get ('/events/:id', eventsController.show)
 // router.post ('/events/:id', eventsController.update)
 
 router.get('/equipments', equipmentsController.index)
-router.get ('/equipments/new', eventsController.new)
-router.get ('/equipments/:id', eventsController.show)
+router.get ('/equipments/new', equipmentsController.new)
+router.get ('/equipments/:id', equipmentsController.show)
 
 
 
