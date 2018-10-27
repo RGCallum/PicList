@@ -9,6 +9,7 @@ const equipmentsController = {
                 equipments: equipments
             })
         })
+        // res.render('equipments/index')
     },
     new: (req, res) =>{
         res.send('im working')
