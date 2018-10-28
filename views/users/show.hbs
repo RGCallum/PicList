@@ -1,50 +1,28 @@
-<h1>Welcome To Your Profile {{user}}</h1>
+<h1>Welcome To Your Profile {{user.id}}</h1>
 	<a href="/">🏠</a>
 
-<h2>You have the following events coming up</h2>
+<h2>Your booked for the following upcoming events:</h2>
+     
+{{events}}
 
-{{#each user.event}}
 
 
-    <h5 >{{username}}</h5>
-    <a href="/users/{{../user._id}}/events/{{_id}}" class="btn btn-primary">Go somewhere</a>
-  
 
-{{/each}}
 
 <main>
 
 	<h2>You are viewing:
 
-		{{user.username}}
+		{{user.name}}
+<br>
 
-	</h2>
-
-
-		<h2>
-
-				{{user.username}}
-
-		</h2>
-
-
-				{{user.events}}</p><br>
-
-			<h3>
-
-	 				{{user.events}} 
-
-			</h3>
-
-			<br>
-
-		  <a href="/{{user._id}}/edit">
+		  <a href="/{{../user._id}}/edit">
        <button> EDIT</button> </a>
 
 
 		</div>
 
     <form action="/{{user._id}}?_method=DELETE" method="POST">
-      <button type="submit">DELETE</button>
+      <button type="submit" value="delete">DELETE</button>
     </form>
 </main>

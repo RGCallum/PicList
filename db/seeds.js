@@ -60,7 +60,7 @@ const wedding = new Event({
     date: "12-2-18",
     time: "6pm",
     type: "wedding",
-    equipment: [camera, lights]
+    equipment: camera, lights
 })
 
 const reunion = new Event({
@@ -68,7 +68,7 @@ const reunion = new Event({
     date: "06-21-19",
     time: "10am",
     type: "reunion",
-    equipment: [camera, tripod]
+    equipment: camera, reflector, tripod
 
 })
 
@@ -77,7 +77,7 @@ const anniversary = new Event({
     date: "04-20-19",
     time: "8pm",
     type: "reunion",
-    equipment: [camera, tripod]
+    equipment: camera, tripod
 
 })
 
@@ -86,7 +86,7 @@ const formalParty = new Event({
     date: "05-20-19",
     time: "8pm",
     type: "formalParty",
-    equipment: [camera, tripod]
+    equipment: camera, lenses
 
 })
 
@@ -95,7 +95,7 @@ const casualParty = new Event({
     date: "08-20-19",
     time: "8pm",
     type: "casualParty",
-    equipment: [camera, tripod]
+    equipment: camera, tripod
 
 })
 
@@ -103,13 +103,13 @@ const user1 = new User({
     email: "john@pics.com",
     username: "Jpics",
     password: "pass1",
-    events: [wedding, reunion]  
+    events: wedding, reunion  
 })
 const user2 = new User({
     email: "tim@wtf.com",
     username: "kidT",
     password: "pass2",
-    events: [reunion, wedding]
+    events: reunion, wedding
 })
 
 
