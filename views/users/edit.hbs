@@ -1,20 +1,28 @@
 <main>
 
-	<h2>Edit User Profile</h2>
+  <h2>Edit User Profile</h2>
 
-	<a href="/">🏠</a>
+  <a href="/">🏠</a>
 
-	<div id="edit-form" class="user-container-show">
+  <div id="edit-form" class="user-container-show">
 
-    <form action="/users/{{users_id}}" method="PATCH">
+    <form action="/users/:id/{{users_id}}" method="PATCH">
       <div>
-        <label for="name">name: </label>
-        <input type="text" name="name" value="{{user.name}}">
+        <label for="username">username: </label>
+        <input type="text" username="username" value="{{user.username}}">
+      </div>
+      <div>
+        <label for="password">password: </label>
+        <input type="text" password="password" value="{{user.password}}">
+      </div>
+      <div>
+        <label for="email">email: </label>
+        <input type="text" name="email" value="{{user.email}}">
       </div>
 
       <div>
-        <label for="img">img: </label>
-        <input type="text" name='img' value="{{user.img}}">
+        <label for="image">img: </label>
+        <input type="text" name='image' value="{{user.image}}">
       </div>
 
       <button type="submit">Edit Profile</button>
@@ -24,5 +32,5 @@
 
 
 
-	</div>
+  </div>
 </main>

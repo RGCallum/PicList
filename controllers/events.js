@@ -16,7 +16,7 @@ const eventsController = {
 
       },
     show: (req, res) =>{
-        const eventId = req.params.eventsId
+        const eventId = req.params.id
         Event.findById(eventId)
         .then(event =>{
             res.render('events/show', {event: event})
@@ -38,7 +38,7 @@ const eventsController = {
 
       update: (req, res) => {
         Event.findByIdAndUpdate(req.params.id, req.body).then((updatedEvent) => {
-          res.redirect(`/${updatedEvent._id}`)
+          res.redirect(`/events/${updatedEvent._id}`)
         })
       },
 

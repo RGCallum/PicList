@@ -1,14 +1,16 @@
+<main>
 <h1>Events Show</h1>
-<p> </p>
+<h2>should be showing events here {{event.name}}</h2>
 
-{{eventsId}}
-    
-
-
-        <button>Edit Event</button>
+    <p>{{event.name}}</p>
+<form action="/events/:id/{{events_id}}/edit" method="PATCH">
+<button>Edit Event</button>
 
 
-
+</form>
+<a href="/events/(events_.id)/edit">
+<button>Edit Event</button>
+</a> 
 
     <br>
     <br>

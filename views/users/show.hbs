@@ -3,7 +3,6 @@
 
 <h2>Your booked for the following upcoming events:</h2>
      
-{{events}}
 
 
 
@@ -11,18 +10,16 @@
 
 <main>
 
-	<h2>You are viewing:
 
-		{{user.name}}
 <br>
+{{usersId}}
 
-		  <a href="/{{../user._id}}/edit">
-       <button> EDIT</button> </a>
+       <button> EDIT</button> 
 
 
 		</div>
 
-    <form action="/{{user._id}}?_method=DELETE" method="POST">
+    <form action="/{{user._id}}" method="POST">
       <button type="submit" value="delete">DELETE</button>
     </form>
 </main>

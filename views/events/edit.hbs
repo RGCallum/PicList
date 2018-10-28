@@ -1,13 +1,13 @@
 <h1>{{title}}</h1>
 <main>
-
+	<a href="/">🏠</a>
 	<h2>Edit Events</h2>
 
-	<a href="/">🏠</a>
+
 
 	<div id="edit-form" class="user-container-show">
 
-    <form action="/events/{{events_id}}" method="POST">
+    <form action="/events/:id/{{events_id}}" method="PATCH">
       <div>
         <label for="name">name: </label>
         <input type="text" name="name" value="{{event.name}}">
@@ -25,17 +25,14 @@
 
             <div>
         <label for="equipment">equipment: </label>
-        <input type="text" even="event" value="{{event.equipment}}">
+        <input type="text" event="event" value="{{event.equipment}}">
       </div> 
 
-   <a href="">  <button type="submit">Edit Event</button></a> 
+   <button type="submit">Edit Event</button>
     </form>
 
 
 
-		<div id="img-preview">
-			<img src="{{user.img}}">
-		</div>
 
 	</div>
 </main>
