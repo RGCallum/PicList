@@ -1,8 +1,25 @@
-<h1>{{title}}</h1>
-<p>Welcome to events {{title}}</p>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{event.name}}</h5>
-    <a href="/users" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+<h1>Events Show</h1>
+<p> </p>
+
+
+    {{#each events}}
+    <div >
+        
+
+        <h3>
+            
+                {{user.events}}
+            
+        </h3>
+
+
+        <button>Edit Event</button>
+
+
+
+    </div>
+    {{/each}}
+    <br>
+    <br>
+<a href="/events/new"><button>Create New Event</button></a> 
+</main>

@@ -1,9 +1,3 @@
-<h1>Events</h1>
-<h1>{{title}}</h1>
-<p>Welcome to Events {{title}}</p>
-<main>
-    <h2>Some text here</h2>
-
     {{#each events}}
     <div class="donut-container">
         <img src="{{img}}" />
@@ -14,10 +8,7 @@
             </a>
         </h3>
 
-        <p>{{date}}</p>
-        <p>{{time}}</p>
-        <p>{{type}}</p>
-        <p>{{equipment}}</p>
+
         <button>Edit Event</button>
 
 
@@ -26,5 +17,5 @@
     {{/each}}
     <br>
     <br>
-<button>Create New Event</button>
+<a href="../events/new"><button>Create New Event</button></a> 
 </main>

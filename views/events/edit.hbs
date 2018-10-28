@@ -7,18 +7,28 @@
 
 	<div id="edit-form" class="user-container-show">
 
-    <form action="/{{user._id}}?_method=PATCH" method="POST">
+    <form action="/{{username._id}}?_method=PATCH" method="POST">
       <div>
         <label for="name">name: </label>
-        <input type="text" name="name" value="{{user.name}}">
+        <input type="text" name="name" value="{{event.name}}">
       </div>
 
       <div>
-        <label for="img">img: </label>
-        <input type="text" name='img' value="{{user.img}}">
+        <label for="date">date: </label>
+        <input type="text" date="date" value="{{event.date}}">
       </div>
 
-   <a href="">  <button type="submit">Create New Event</button></a> 
+            <div>
+        <label for="time">time: </label>
+        <input type="text" time="time" value="{{event.time}}">
+      </div>
+
+            <div>
+        <label for="equipment">equipment: </label>
+        <input type="text" even="event" value="{{event.equipment}}">
+      </div> 
+
+   <a href="">  <button type="submit">Edit Event</button></a> 
     </form>
 
 

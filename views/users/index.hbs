@@ -3,19 +3,14 @@
 <main>
 	<h2>Some text here</h2>
 
-    {{#each users}}
-			<div class="donut-container">
-        <img src="{{img}}" />
+    {{!-- {{#each users}}
 
-				<h3>
-          <a href="/{{_id}}">
-            {{name}}
-          </a>
-        </h3>
+    {{/each}} --}}
 
-				<p>$ {{price}} each </p>
-
-			</div>
-    {{/each}}
-
+<h2>Sign In</h2>
+<form action="/user?_method=PUT" method="POST" class="auth-form">
+  <input type="email" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Sign In" class="btn">
+</form>
 </main>

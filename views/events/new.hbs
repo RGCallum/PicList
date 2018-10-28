@@ -6,7 +6,7 @@
 
   <a href="/">🏠</a>
 
-  <div id="edit-form" class="event-container-show">
+  <div id="edit-form" class="donut-container-show">
 
     <form action="/" method="POST">
       <div>
@@ -14,15 +14,22 @@
         <input type="text" name="name">
       </div>
       <div>
-        <label for="description">description: </label>
-        <input type="text" name="description">
+        <label for="date">date: </label>
+        <input type="date" name="date">
       </div>
       <div>
-        <label for="img">img: </label>
-        <input type="text" name='img'>
+        <label for="time">time: </label>
+        <input type="text" name='time'>
       </div>
-    
-      <button type="submit">Create New Event</button>
+      <div>
+        <label for="type">type: </label>
+        <input type="text" name='type'>
+      </div>
+    <div>
+        <label for="equipment">equipment: </label>
+        <input type="text" name='equipment'>
+      </div>
+    <button type="submit">Create New Event</button>
     </form>
 
   </div>
