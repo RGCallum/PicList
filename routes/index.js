@@ -14,6 +14,7 @@ const equipmentsController = require('../controllers/equipments.js')
  router.get('/users/:id/edit', usersController.edit)
  router.post('/users', usersController.create) 
  router.delete('/users/:id', usersController.delete)
+ router.patch('/users/:id', usersController.update)
 
 router.get ('/events', eventsController.index)
 router.get ('/events/new', eventsController.new)
