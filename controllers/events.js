@@ -25,7 +25,7 @@ const eventsController = {
 
     create: (req, res) => {
         Event.create(req.body).then((newEvent) => {
-          res.redirect(`/${newEvent._id}`)
+          res.redirect(`/events/${newEvent._id}`)
         })
       },
     
