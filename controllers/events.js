@@ -12,8 +12,9 @@ const eventsController = {
     },
 
     new: (req, res) =>{
-        res.send('im working')
-    },
+        res.render('events/new')
+
+      },
     show: (req, res) =>{
         const eventId = req.params.eventsId
         Event.findById(eventId)
