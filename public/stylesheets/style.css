@@ -2,15 +2,19 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: rgb(254, 254, 254);
+  
   /* text-shadow: 1px 1px 1px black; */
   background-color: rgba(0, 0, 0, 0.558);
-  /* background-image: url(/Images/dramaticClosetDark.png); */
+  background-image: url(/Images/dramaticClosetDark.png);
 background-size: cover;
 background-repeat: no-repeat;
 }
 
+#h2Text, #h1Text{
+  color: rgb(254, 254, 254);
 
+}
 
-a {
+a, h1, h2, p, li {
   color: #00B7FF;
 }
