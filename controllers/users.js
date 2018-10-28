@@ -11,10 +11,10 @@ const usersController = {
         })
     },
     new: (req, res) =>{
-        // res.send('im working')
-        User.create(req.body).then((newUser) => {
-            res.redirect(`/users/new/${newUser._id}`)
-          })
+      res.render('users/new')
+          //     User.create(req.body).then((newUser) => {
+          //   res.redirect('/users/new')
+          // })
     },
     show: (req, res) =>{
         const userId = req.params.usersId

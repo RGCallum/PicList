@@ -1,35 +1,21 @@
 <h1>{{title}}</h1>
 <main>
 
-    <h2>Edit User Profile</h2>
+    <h2>New User Profile</h2>
 
   <a href="/">🏠</a>
+<h1>Sign In/Sign Up</h1>
+<form action="/user?_method=PUT" method="POST" class="auth-form">
+  <input type="email" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Sign In" class="btn">
+</form>
 
-  <div id="edit-form" class="container-show">
-
-    <form action="/" method="POST">
-      <div>
-        <label for="name">name: </label>
-        <input type="text" name="name">
-      </div>
-      <div>
-        <label for="description">description: </label>
-        <input type="text" name="description">
-      </div>
-      <div>
-        <label for="img">img: </label>
-        <input type="text" name='img'>
-      </div>
-      <div>
-        <label for="price">price: </label>
-        <input type="number" name="price">
-      </div>
-      <div>
-        <label for="qty">qty: </label>
-        <input type="number" name="qty">
-      </div>
-      <button type="submit">Create New Donut</button>
-    </form>
-
-  </div>
+<form action="/user?_method=PUT" method="POST" class="auth-form">
+  <input type="email" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Sign Up" class="btn">
+</form>
+  
 </main>
+
