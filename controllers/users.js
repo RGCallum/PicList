@@ -17,7 +17,7 @@ const usersController = {
           // })
     },
     show: (req, res) =>{
-        const userId = req.params.usersId
+        const userId = req.params.id
         User.findById(userId).populate('events')
         .then(user => {
             res.render('users/show', {user: user})
@@ -44,7 +44,7 @@ const usersController = {
 
       delete: (req, res) => {
         User.findByIdAndRemove(req.params.id).then(() => {
-          res.redirect('/')
+          res.redirect('/users/index')
         })
       }
     

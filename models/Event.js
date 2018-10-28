@@ -5,6 +5,7 @@ const Event = new Schema({
     name: String,
     date: Date,
     time: String,
+    location: String,
     type: String,
     equipment: [
         {

@@ -16,8 +16,7 @@ const eventsController = {
 
       },
     show: (req, res) =>{
-        const eventId = req.params.id
-        Event.findById(eventId)
+        Event.findById(req.params.id)
         .then(event =>{
             res.render('events/show', {event: event})
         })

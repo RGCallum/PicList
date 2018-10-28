@@ -7,7 +7,7 @@
 
 	<div id="edit-form" class="user-container-show">
 
-    <form action="/events/:id/{{events_id}}" method="PATCH">
+    <form action="/events/show/{{events._id}}" method="PATCH">
       <div>
         <label for="name">name: </label>
         <input type="text" name="name" value="{{event.name}}">
@@ -28,9 +28,10 @@
         <input type="text" event="event" value="{{event.equipment}}">
       </div> 
 
-   <button type="submit">Edit Event</button>
-    </form>
+{{!-- <form action="/events/{{updatedEvent._id}}" method="PATCH"> --}}
+    <button>Edit Event</button>
 
+{{!-- </form> --}}
 
 
 

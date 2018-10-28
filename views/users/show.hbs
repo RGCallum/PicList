@@ -1,9 +1,9 @@
-<h1>Welcome To Your Profile {{user.id}}</h1>
+<h1>Welcome To Your Profile {{user.email}}</h1>
 	<a href="/">🏠</a>
 
 <h2>Your booked for the following upcoming events:</h2>
      
-
+		 {{event._id}}
 
 
 
@@ -12,14 +12,14 @@
 
 
 <br>
-{{usersId}}
+{{user.email}}
+{{user.events}}
+    <form action="/users/{{user._id}}/edit" method="PATCH">
 
        <button> EDIT</button> 
-
+</form>
 
 		</div>
 
-    <form action="/{{user._id}}" method="POST">
-      <button type="submit" value="delete">DELETE</button>
-    </form>
+
 </main>
