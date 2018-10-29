@@ -44,7 +44,7 @@ const usersController = {
 
       delete: (req, res) => {
         User.findByIdAndRemove(req.params.id).then(() => {
-          res.redirect('/')
+          res.redirect('/app/index')
         })
       }
     

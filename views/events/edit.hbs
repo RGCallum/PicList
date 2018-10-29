@@ -4,7 +4,6 @@
 
 
 
-	<div id="edit-form" class="user-container-show">
 
     <form action="/events/{{event._id}}?_method=PATCH" method="POST">
       <div>
@@ -31,10 +30,12 @@
       </div> 
 
     <button>Edit Event</button>
-
 </form>
+<br>
+
+    <form action="/event/{{event._id}}?_method=DELETE" method="POST">
+      <button type="submit">Delete Event</button>
+    </form>
 
 
-
-	</div>
 </main>

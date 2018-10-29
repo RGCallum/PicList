@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  </head>
-  <body id="bodyColor">
-    
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">🏠Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/users{{users_.id}}">👤My profile</a>
-  </li>
-  <li> <h2 id="h2Text">  PicList  </h2>   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/events/{{user.events}}">📅My Events</a>
-  </li>
+<head>
+  <title>{{title}}</title>
+  <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script defer src="/public/javascripts/app.js"></script>
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+</head>
+
+<body id="bodyColor">
+
+  <ul class="nav">
     <li class="nav-item">
-    <a class="nav-link" href="/equipments/">📸 My Equipment</a> 
-  </li>
+      <a class="nav-link active" href="/">🏠Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/users{{users_.id}}">👤My profile</a>
+    </li>
+    <li>
+      <h2 id="h2Text"> PicList </h2>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/events/{{user.events}}">📅Events</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/equipments/">📸Equipment</a>
+    </li>
 
-</ul>
-<br>
-<br>
-    {{{body}}}
-  </body>
+  </ul>
+
+  <br>
+  <br>
+  {{{body}}}
+
+</body>
+
 </html>
