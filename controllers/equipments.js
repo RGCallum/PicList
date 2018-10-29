@@ -10,6 +10,11 @@ const equipmentsController = {
             })
         })
     },
+    create: (req, res) => {
+        Equipment.create(req.body).then((newEquipment) => {
+          res.redirect(`/equipments/${newEquipment._id}`)
+        })
+      },
     new: (req, res) =>{
         res.render('equipments/new')
     },

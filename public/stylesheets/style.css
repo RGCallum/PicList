@@ -12,13 +12,13 @@ body {
   background-color: rgba(0, 0, 0, 0.29);
   color: rgb(254, 254, 254);
   text-shadow: 1px 1px 1px black;
-
 }
 
 #h4Text{
 z-index: 100;
 position: absolute;
 }
+
 #enterBtn{
   z-index: 100;
   position: absolute;
@@ -27,7 +27,6 @@ position: absolute;
   }
 
 #doorLeft{
-  /* background-image: url(/images/doorLeft.png); */
   display: block;
   z-index: 2;
   position: absolute;
@@ -47,17 +46,14 @@ position: absolute;
 
 @keyframes slide-left {
   0% {
- 
-            transform: translateX(0);
+  transform: translateX(0);
   }
   100% {
-            transform: translateX(-800px);
+ transform: translateX(-800px);
   }
 }
 
-#doorRight{
-  /* background-image: url(/images/doorRight.png); */
-  
+#doorRight{  
   display: block;
   z-index: 2;
   position: absolute;
@@ -86,9 +82,6 @@ position: absolute;
   /* border: inset 2px; */
   z-index: 10;
   position: relative;
-}
-#h2Text, #h1Text{
-
 }
 
 a {

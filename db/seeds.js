@@ -75,7 +75,7 @@ const reunion = new Event({
 })
 
 const anniversary = new Event({
-    name: "Garrett Anniversary",
+    name: "Garrick Anniversary",
     date: "04-20-19",
     time: "8pm",
     location: "Earth2",
@@ -108,7 +108,7 @@ const user1 = new User({
     email: "john@pics.com",
     name: "Jpics",
     password: "pass1",
-    events: [wedding, reunion ] 
+    events: [wedding, reunion] 
 })
 const user2 = new User({
     email: "tim@wtf.com",

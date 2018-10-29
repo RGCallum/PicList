@@ -9,8 +9,10 @@ const Event = new Schema({
     type: String,
     equipment: [
         {
-          type: Schema.Types.ObjectId,
+          type: String,
+          // type: Schema.Types.ObjectId,
           ref: "Equipment"
+          
         }
       ]
 })

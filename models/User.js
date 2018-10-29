@@ -8,8 +8,9 @@ const User = new Schema({
   image: String,
   events: [
     {
-      type: Schema.Types.ObjectId,
+      type: String,
       ref: "Event"
+  
     }
   ]
 })
