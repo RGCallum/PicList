@@ -3,18 +3,21 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: rgb(254, 254, 254);
   
-  /* text-shadow: 1px 1px 1px black; */
+  /* background-image: url(/Images/dramaticClosetDark.png); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#bodyColor{
   background-color: rgba(0, 0, 0, 0.558);
-  background-image: url(/Images/dramaticClosetDark.png);
-background-size: cover;
-background-repeat: no-repeat;
+  color: rgb(254, 254, 254);
+  text-shadow: 1px 1px 1px black;
+
 }
 
 #h2Text, #h1Text{
-  color: rgb(254, 254, 254);
 
 }
 
-a, h1, h2, p, li {
+a {
   color: #00B7FF;
 }
