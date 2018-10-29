@@ -1,10 +1,8 @@
 <h1>Welcome To Your Profile {{user.email}}</h1>
 
-<h2>Your booked for the following upcoming events:</h2>
+<br>
+<h2>Your upcoming events:</h2>
      
-		 {{event._id}}
-
-
 
 
 <main>
@@ -15,9 +13,15 @@
 {{user.events}}
     <form action="/users/{{user._id}}/edit" method="PATCH">
 
-       <button> EDIT</button> 
+       <button> Edit Profile</button> 
+</form>
+  <form action="/events/{{event._id}}/edit" method="PATCH">
+    <button>Edit Event</button>
 </form>
 
+    <br>
+    <br>
+ <a href="/events/new"> <button>Add New Event</button></a>
 		</div>
 
 
