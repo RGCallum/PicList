@@ -1,21 +1,28 @@
-<h1>Welcome To Your Profile {{user.email}}</h1>
+<h1>Welcome To Your Profile {{user.name}}</h1>
 
 <br>
 
 <main>
 <h3>Your upcoming events:</h3>
 
-
 <br>
-{{user.email}}
-{{user.events}}
+
+{{#each user.events}}
+    <h3> 
+       <a href="/events/{{this._id}}">
+        {{name}}
+      </a>
+    </h3>
+    {{/each}}
+		<br>
+
     <form action="/users/{{user._id}}/edit" method="PATCH">
 
        <button> Edit Profile</button> 
 </form>
-  <form action="/events/{{event._id}}/edit" method="PATCH">
-    <button>Edit Event</button>
-</form>
+<br>
+
+
 
     <br>
     <br>

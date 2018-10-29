@@ -43,7 +43,7 @@ const eventsController = {
 
       delete: (req, res) => {
         Event.findByIdAndRemove(req.params.id).then(() => {
-          res.redirect('/')
+          res.redirect('/events')
         })
       }
     

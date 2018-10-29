@@ -2,13 +2,10 @@
 
   <h2>Edit User Profile</h2>
 
-
-  <div id="edit-form" class="user-container-show">
-
-    <form action="/users/{{user._id}}" method="PATCH">
+    <form action="/users/{{user._id}}?_method=PATCH" method="POST">
       <div>
-        <label for="username">username: </label>
-        <input type="text" username="username" value="{{user.username}}">
+        <label for="name">name: </label>
+        <input type="text" name="name" value="{{user.name}}">
       </div>
       <div>
         <label for="password">password: </label>
@@ -28,11 +25,10 @@
     </form>
 <br>
 
-    <form action="/users/{{users._id}}?_method=DELETE" method="DELETE">
-      <button class="btn red" type="submit">Delete Profile</button>
+    <form action="/users/{{users._id}}?_method=DELETE" method="POST">
+      <button type="submit">Delete Profile</button>
     </form>
 
 
 
-  </div>
 </main>

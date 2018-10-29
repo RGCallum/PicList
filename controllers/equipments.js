@@ -9,14 +9,12 @@ const equipmentsController = {
                 equipments: equipments
             })
         })
-        // res.render('equipments/index')
     },
     new: (req, res) =>{
         res.render('equipments/new')
     },
     show: (req, res) =>{
-        const equipmentId = req.params.equipmentsId
-        Equipment.findById(equipmentId)
+        Equipment.findById(req.params.id)
         .then(equipment =>{
             res.render('equipments/show', {equipment: equipment})
         })

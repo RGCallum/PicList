@@ -17,12 +17,13 @@ const equipmentsController = require('../controllers/equipments.js')
  router.patch('/users/:id', usersController.update)
 
 router.get ('/events', eventsController.index)
+router.patch('/events/:id', eventsController.update)
 router.get ('/events/new', eventsController.new)
 router.get ('/events/:id', eventsController.show)
 router.get('/events/:id/edit', eventsController.edit) 
 router.post('/events', eventsController.create) 
 router.delete('/events/:id', eventsController.delete)
-router.patch('/events/:id', eventsController.update)
+
 // router.put('/events/:id', eventsController.update)
 // router.post ('/events/:id', eventsController.update)
 
