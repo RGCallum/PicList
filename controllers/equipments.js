@@ -12,7 +12,7 @@ const equipmentsController = {
         // res.render('equipments/index')
     },
     new: (req, res) =>{
-        res.send('im working')
+        res.render('equipments/new')
     },
     show: (req, res) =>{
         const equipmentId = req.params.equipmentsId

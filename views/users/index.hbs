@@ -3,8 +3,22 @@
 <div>
 </div>
   
+    {{#each users}}
+
+        <h3>
+            
+                            <a href="/users/{{this._id}}">
+                {{name}}
+                                {{!-- <img src="{{this.img}}" alt=""> --}}
+
+            </a>
+        </h3>
 
 
+
+
+
+    {{/each}}
 <h2>Sign In</h2>
 <form action="/users{{users_id}}" method="POST" class="auth-form">
   <input type="email" name="email" placeholder="Email">
