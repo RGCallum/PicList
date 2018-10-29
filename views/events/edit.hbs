@@ -8,28 +8,28 @@
     <form action="/events/{{event._id}}?_method=PATCH" method="POST">
       <div>
         <label for="name">name: </label>
-        <input type="text" name="name" value="{{event.name}}">
+        <input type="name" name="name" value="{{event.name}}">
       </div>
 
       <div>
         <label for="date">date: </label>
-        <input type="text" date="date" value="{{event.date}}">
+        <input type="date" name="date" value="{{event.date}}">
       </div>
 
             <div>
         <label for="time">time: </label>
-        <input type="text" time="time" value="{{event.time}}">
+        <input type="text" name="time" value="{{event.time}}">
       </div>
             <div>
         <label for="location">location: </label>
-        <input type="text" location="location" value="{{event.location}}">
+        <input type="text" name="location" value="{{event.location}}">
       </div>
             <div>
         <label for="equipment">equipment: </label>
-        <input type="text" event="event" value="{{event.equipment}}">
+        <input type="text" name="event" value="{{event.equipment}}">
       </div> 
 
-    <button>Edit Event</button>
+    <button type="submit">Edit Event</button>
 </form>
 <br>
 
