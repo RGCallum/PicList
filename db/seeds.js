@@ -149,6 +149,8 @@ const user5 = new User({
 
 
 User.remove({})
+    .then(() => Event.remove({}))
+    .then(() => Equipment.remove({}))
     .then(() => Event.insertMany([wedding, reunion, anniversary, casual, formal]))
     .then(() => Equipment.insertMany([Cameras, LightKits, Tripods, Lenses, Reflectors, Printers, ExtensionCords, Sandbags, Backdrops, Gels, Computers]))
     .then(() => user1.save())
