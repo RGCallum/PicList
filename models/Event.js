@@ -10,7 +10,6 @@ const Event = new Schema({
     equipment: [
         {
           type: String,
-          // type: Schema.Types.ObjectId,
           ref: "Equipment"
           
         }

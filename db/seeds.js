@@ -11,7 +11,7 @@ const Cameras = new Equipment({
     available: 4
 })
 
-const Light Kits = new Equipment({
+const LightKits = new Equipment({
     name: "Light Kits",
     available: 5
 
@@ -39,7 +39,7 @@ const Printers = new Equipment({
     available: 4
 })
 
-const Extension Cords = new Equipment({
+const ExtensionCords = new Equipment({
     name: "Extension Cords",
     available: 24
 
@@ -73,7 +73,7 @@ const wedding = new Event({
     time: "6pm",
     location: "Wakanda",
     type: "wedding",
-    equipment: [Cameras, Light Kits, Backdrops, Computers, Printers, Lenses]
+    equipment: [Cameras, LightKits, Backdrops, Computers, Printers, Lenses]
 })
 
 const reunion = new Event({
@@ -150,7 +150,7 @@ const user5 = new User({
 
 User.remove({})
     .then(() => Event.insertMany([wedding, reunion, anniversary, casual, formal]))
-    .then(() => Equipment.insertMany([Cameras, Light Kits, Tripods, Lenses, Reflectors, Printers, Extension Cords, Sandbags, Backdrops, Gels, Computers]))
+    .then(() => Equipment.insertMany([Cameras, LightKits, Tripods, Lenses, Reflectors, Printers, ExtensionCords, Sandbags, Backdrops, Gels, Computers]))
     .then(() => user1.save())
     .then(() => user2.save())
     .then(() => user3.save())
