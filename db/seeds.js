@@ -130,7 +130,7 @@ const user4 = new User({
     email: "Dana@Queen.com",
     name: "Dana Owens",
     password: "1234",
-    events: [outdoor, casual, wedding]
+    events: [reunion, casual, wedding]
 })
 const user5 = new User({
     email: "Jay@Roc.com",
@@ -141,7 +141,7 @@ const user5 = new User({
 
 
 User.remove({})
-    .then(() => Event.insertMany([wedding, reunion, anniversary, casual, formal, outdoor]))
+    .then(() => Event.insertMany([wedding, reunion, anniversary, casual, formal]))
     .then(() => Equipment.insertMany([camera, lights, tripod, lenses, reflector, printer, cords, sandbags, backdrop, gels, computer]))
     .then(() => user1.save())
     .then(() => user2.save())
