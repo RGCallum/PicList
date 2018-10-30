@@ -6,57 +6,65 @@ const Equipment = require('../models/Equipment.js')
 
 const mongoose = require('./connection')
 
-const camera = new Equipment({
-    name: "Camera",
-    // image: "/Images/dramaticCloset1light.png)"
+const Cameras = new Equipment({
+    name: "Cameras",
+    available: 4
 })
 
-const lights = new Equipment({
-    name: "Lights",
-    // image: "https://mbtskoudsalg.com/images/circle-light-png.png"
+const Light Kits = new Equipment({
+    name: "Light Kits",
+    available: 5
+
 })
 
-const tripod = new Equipment({
-    name: "Tripod",
-    // image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+const Tripods = new Equipment({
+    name: "Tripods",
+    available: 4    
 })
 
-const lenses = new Equipment({
-    name: "lenses",
-    // image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+const Lenses = new Equipment({
+    name: "Lenses",
+    available: 14
+
 })
 
-const reflector = new Equipment({
-    name: "reflector",
-    // image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+const Reflectors = new Equipment({
+    name: "Reflectors",
+    available: 3
+
 })
 
-const printer = new Equipment({
-    name: "printer",
-    // image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+const Printers = new Equipment({
+    name: "Printers",
+    available: 4
 })
 
-const cords = new Equipment({
-    name: "cords",
-    // image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+const Extension Cords = new Equipment({
+    name: "Extension Cords",
+    available: 24
+
 })
-const sandbags = new Equipment({
-    name: "sandbags",
-    // image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+const Sandbags = new Equipment({
+    name: "Sandbags",
+    available: 30
+
 })
-const backdrop = new Equipment({
-    name: "backdrop",
-    image: "/Images/backdrops.png)"
+const Backdrops = new Equipment({
+    name: "Backdrops",
+    available: 10
+
 })
 
-const gels = new Equipment({
-    name: "gels",
-    // image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+const Gels = new Equipment({
+    name: "Gels",
+    available: 30
+
 })
 
-const computer = new Equipment({
-    name: "computer",
-    // image: "https://png.pngtree.com/element_pic/16/10/24/050bc0ed97fbf7c104037ea3a833b209.jpg"
+const Computers = new Equipment({
+    name: "Computers",
+    available: 10
+
 })
 
 const wedding = new Event({
@@ -65,7 +73,7 @@ const wedding = new Event({
     time: "6pm",
     location: "Wakanda",
     type: "wedding",
-    equipment: [camera, lights, backdrop, computer, printer, lenses]
+    equipment: [Cameras, Light Kits, Backdrops, Computers, Printers, Lenses]
 })
 
 const reunion = new Event({
@@ -74,7 +82,7 @@ const reunion = new Event({
     time: "10am",
     location: "Sokovia",
     type: "reunion",
-    equipment: [camera, reflector, computer]
+    equipment: [Cameras, Reflectors, Computers]
 
 })
 
@@ -84,7 +92,7 @@ const anniversary = new Event({
     time: "8pm",
     location: "Earth2",
     type: "reunion",
-    equipment: [camera, gels, printer, backdrop, tripod, computer]
+    equipment: [Cameras, Gels, Printers, Backdrops, Tripods, Computers]
 
 })
 
@@ -94,7 +102,7 @@ const formal = new Event({
     time: "8pm",
     location: "Brooklyn",
     type: "Formal Party",
-    equipment: [camera, lenses, backdrop, tripod, printer, computer]
+    equipment: [Cameras, Lenses, Backdrops, Tripods, Printers, Computers]
 
 })
 
@@ -104,7 +112,7 @@ const casual = new Event({
     time: "8pm",
     location: "Central City",
     type: "Casual Party",
-    equipment: [camera, reflector, lenses, tripod]
+    equipment: [Cameras, Reflectors, Lenses, Tripods]
 
 })
 
@@ -142,11 +150,11 @@ const user5 = new User({
 
 User.remove({})
     .then(() => Event.insertMany([wedding, reunion, anniversary, casual, formal]))
-    .then(() => Equipment.insertMany([camera, lights, tripod, lenses, reflector, printer, cords, sandbags, backdrop, gels, computer]))
+    .then(() => Equipment.insertMany([Cameras, Light Kits, Tripods, Lenses, Reflectors, Printers, Extension Cords, Sandbags, Backdrops, Gels, Computers]))
     .then(() => user1.save())
     .then(() => user2.save())
     .then(() => user3.save())
     .then(() => user4.save())    
     .then(() => user5.save())
     .then(() => console.log("Database seeded successfully"))
-    .then(() => mongoose.connection.close()) //automatically closes mongooseshow 
+    .then(() => mongoose.connection.close()) 

@@ -18,6 +18,16 @@ const equipmentsController = {
     new: (req, res) =>{
         res.render('equipments/new')
     },
+    edit: (req, res) => {
+        Equipment.findById(req.params.id).then(equipment => {
+          res.render('equipments/edit', { equipment: equipment })
+        })
+      },
+      update: (req, res) => {
+        Equipment.findByIdAndUpdate(req.params.id, req.body).then((updatedEquipment) => {
+          res.redirect(`/equipments/${updatedEquipment._id}`)
+        })
+      },
     show: (req, res) =>{
         Equipment.findById(req.params.id)
         .then(equipment =>{

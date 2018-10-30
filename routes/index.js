@@ -24,12 +24,15 @@ router.post('/events', eventsController.create)
 router.patch('/events/:id', eventsController.update)
 router.delete('/events/:id', eventsController.delete)
 
-// router.put('/events/:id', eventsController.update)
-// router.post ('/events/:id', eventsController.update)
 
 router.get('/equipments', equipmentsController.index)
 router.get ('/equipments/new', equipmentsController.new)
 router.get ('/equipments/:id', equipmentsController.show)
+router.post('/equipments', equipmentsController.create) 
+router.get('/equipments/:id/edit', equipmentsController.edit) 
+router.patch('/equipments/:id', equipmentsController.update)
+
+
 
 
 

@@ -12,9 +12,9 @@ const usersController = {
     },
     new: (req, res) =>{
       res.render('users/new')
-          //     User.create(req.body).then((newUser) => {
-          //   res.redirect('/users/new')
-          // })
+              User.create(req.body).then((newUser) => {
+            res.redirect('/users/new')
+          })
     },
     show: (req, res) =>{
         const userId = req.params.id
