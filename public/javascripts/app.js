@@ -1,11 +1,10 @@
-// let button = document.querySelector('#enterBtn')
+let button = document.querySelector('#enterBtn')
 
 
-// button.addEventListener('click', function () {
-//     document.querySelector('#doorLeft').style.display = 'none';
-//     document.querySelector('#doorRight').style.display = 'none';
-// })
+button.addEventListener('click', function () {
+    // document.querySelector('#doorLeft').style.animationPlayState = 'running';
+    // document.querySelector('#doorRight').style.animationPlayState = 'running';
+        document.querySelector('#enterBtn').style.display = 'none';
 
-// $("#enterBtn").click(function() {
-//     $('#doorLeft').toggleClass('#doorLeft-active');
-//   });
+console.log('i work baby')
+})

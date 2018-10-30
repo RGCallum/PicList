@@ -1,41 +1,41 @@
 <h1>{{title}}</h1>
 <main>
-	<h2>Edit Events</h2>
+  <h2>Edit Events</h2>
 
 
 
 
-    <form action="/events/{{event._id}}?_method=PATCH" method="POST">
-      <div>
-        <label for="name">name: </label>
-        <input type="name" name="name" value="{{event.name}}">
-      </div>
+  <form action="/events/{{event._id}}?_method=PATCH" method="POST">
+    <div>
+      <label for="name">name: </label>
+      <input type="name" name="name" value="{{event.name}}">
+    </div>
 
-      <div>
-        <label for="date">date: </label>
-        <input type="date" name="date" value="{{event.date}}">
-      </div>
+    <div>
+      <label for="date">date: </label>
+      <input type="date" name="date" value="{{event.date}}">
+    </div>
 
-            <div>
-        <label for="time">time: </label>
-        <input type="text" name="time" value="{{event.time}}">
-      </div>
-            <div>
-        <label for="location">location: </label>
-        <input type="text" name="location" value="{{event.location}}">
-      </div>
-            <div>
-        <label for="equipment">equipment: </label>
-        <input type="text" name="event" value="{{event.equipment}}">
-      </div> 
+    <div>
+      <label for="time">time: </label>
+      <input type="text" name="time" value="{{event.time}}">
+    </div>
+    <div>
+      <label for="location">location: </label>
+      <input type="text" name="location" value="{{event.location}}">
+    </div>
+    <div>
+      <label for="equipment">equipment: </label>
+      <input type="text" name="event" value="{{event.equipment}}">
+    </div>
 
     <button type="submit">Edit Event</button>
-</form>
-<br>
+  </form>
+  <br>
 
-    <form action="/events/{{event._id}}?_method=DELETE" method="POST">
-      <button type="submit">Delete Event</button>
-    </form>
+  <form action="/events/{{event._id}}?_method=DELETE" method="POST">
+    <button type="submit">Delete Event</button>
+  </form>
 
 
 </main>
