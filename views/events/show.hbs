@@ -1,6 +1,6 @@
 <main>
 
-{{!-- show event name and details --}}
+  {{!-- show event name and details --}}
 
   <h2>{{event.name}}</h2>
 
@@ -13,13 +13,13 @@
 
   <form action="/events/{{event._id}}/edit" method="PATCH">
     <button class="btn btn-primary">Edit Event</button>
-</form>
+  </form>
 
-    <br>
- <a href="/events/new"> <button class="btn btn-success">Add New Event</button></a>
-    <br>
-    <br>
+  <br>
+  <a href="/events/new"> <button class="btn btn-success">Add New Event</button></a>
+  <br>
+  <br>
 
- <a href="/events"><button class="btn btn-secondary">Back to list</button></a>
+  <a href="/events"><button class="btn btn-secondary">Back to list</button></a>
 
 </main>

@@ -4,7 +4,7 @@
 
 
 
-{{!-- form to update event information --}}
+  {{!-- form to update event information --}}
   <form action="/events/{{event._id}}?_method=PATCH" method="POST">
     <div>
       <label for="name">name: </label>
@@ -32,9 +32,9 @@
     <button type="submit" class="btn btn-success">Save Event</button>
   </form>
   <br>
- <a href="/events"><button class="btn btn-warning">Cancel Edit</button></a>
-<br>
-<br>
+  <a href="/events"><button class="btn btn-warning">Cancel Edit</button></a>
+  <br>
+  <br>
   <form action="/events/{{event._id}}?_method=DELETE" method="POST">
     <button type="submit" class="btn btn-danger">Delete Event</button>
   </form>

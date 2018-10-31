@@ -24,7 +24,7 @@ const Tripods = new Equipment({
     name: "Tripods",
     available: 4,
     image: "/images/tripod.png"
-    
+
 })
 
 const Lenses = new Equipment({
@@ -139,7 +139,7 @@ const user1 = new User({
     email: "john@gtfoh.com",
     name: "John Connor",
     password: "1234",
-    events: [wedding, casual, reunion] 
+    events: [wedding, casual, reunion]
 })
 const user2 = new User({
     email: "tim@wtf.com",
@@ -175,7 +175,7 @@ User.remove({})
     .then(() => user1.save())
     .then(() => user2.save())
     .then(() => user3.save())
-    .then(() => user4.save())    
+    .then(() => user4.save())
     .then(() => user5.save())
     .then(() => console.log("Database seeded successfully"))
     .then(() => mongoose.connection.close()) 

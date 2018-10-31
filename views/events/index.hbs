@@ -1,21 +1,21 @@
-   <main>
-       <h2>Upcoming Events</h2>
-       <br>
-{{!-- grab all equipment and show by name --}}
+<main>
+    <h2>Upcoming Events</h2>
+    <br>
+    {{!-- grab all equipment and show by name --}}
     {{#each events}}
 
-        <h3>
-            
-                            <a href="/events/{{this._id}}">
-                {{name}}
-            </a>
-        </h3>
+    <h3>
+
+        <a href="/events/{{this._id}}">
+            {{name}}
+        </a>
+    </h3>
 
 
 
 
 
     {{/each}}
-  <br>
-<a href="/events/new"><button class="btn btn-primary">Create New Event</button></a> 
+    <br>
+    <a href="/events/new"><button class="btn btn-primary">Create New Event</button></a>
 </main>

@@ -1,21 +1,21 @@
 <h1>{{title}}</h1>
 <main>
-<div>
-</div>
-<h2> Photographers:</h2>  
+    <div>
+    </div>
+    <h2> Photographers:</h2>
 
-{{!-- grab all users and show by name --}}
+    {{!-- grab all users and show by name --}}
 
-{{#each users}}
+    {{#each users}}
 
-        <h3>
-                        {{!-- link users to specific --}}
+    <h3>
+        {{!-- link users to specific --}}
 
-                            <a href="/users/{{this._id}}">
-                {{name}}
+        <a href="/users/{{this._id}}">
+            {{name}}
 
-            </a>
-        </h3>
+        </a>
+    </h3>
 
 
 
@@ -24,8 +24,7 @@
     {{/each}}
     <br>
 
-	<h3> New to the Team?</h3>
-<a href="/users/new/"><button class="btn btn-success">Sign Up</button></a> 
+    <h3> New to the Team?</h3>
+    <a href="/users/new/"><button class="btn btn-success">Sign Up</button></a>
 
 </main>
-    
