@@ -32,7 +32,9 @@
     <button type="submit" class="btn btn-success">Save Event</button>
   </form>
   <br>
-
+ <a href="/events"><button class="btn btn-warning">Cancel Edit</button></a>
+<br>
+<br>
   <form action="/events/{{event._id}}?_method=DELETE" method="POST">
     <button type="submit" class="btn btn-danger">Delete Event</button>
   </form>
