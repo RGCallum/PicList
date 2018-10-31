@@ -2,11 +2,15 @@
 <main>
 <div>
 </div>
-<h2> Photographers:</h2>   
+<h2> Photographers:</h2>  
+
+{{!-- grab all users and show by name --}}
+
 {{#each users}}
 
         <h3>
-            
+                        {{!-- link users to specific --}}
+
                             <a href="/users/{{this._id}}">
                 {{name}}
 

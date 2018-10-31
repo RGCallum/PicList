@@ -1,10 +1,11 @@
    <main>
        <h1> Available Equipment:</h1>
 
+{{!-- grab all equipment and show by name --}}
     {{#each equipments}}
 
         <h3>
-            
+            {{!-- link equipment to specific --}}
                             <a href="/equipments/{{this._id}}">
                 {{name}}
             </a>
