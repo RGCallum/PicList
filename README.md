@@ -5,7 +5,7 @@ Overview For project #2, I created a Photography Company Event and inventory for
 
 The company's staff photographers can create, view, update and delete Profiles, Events and equipment. They can also print or export lists of staff, events or equipment by right clicking on the list and selecting print.
 
-Before starting this project, I prepared my background with extensive use of Photoshop by adding about 25 different layers of images to the shelves of the empty red closet. Then added two sets of doors to the index page and created a slide animation to open the doors on a 3s delay.
+Before starting this project, I prepared my background with extensive use of Photoshop by adding about 36 different layers of equipment images to the shelves of the empty red closet. Then added two sets of doors to the index page and created a slide animation to open the doors on a 3s delay.
 
 Weblink: https://gentle-lake-52243.herokuapp.com/
 
