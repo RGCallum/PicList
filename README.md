@@ -23,10 +23,10 @@ Wireframe by Figma
 ERD by LucidChart
 
 Version 2
-Dry code
 More animations
+Better text style
 Optimized for mobile
-Click images to add to equipment list
+Click images to add to equipment list and populate shelves
 
 
 
