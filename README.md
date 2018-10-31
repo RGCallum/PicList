@@ -14,18 +14,24 @@ Before starting this project, I prepared my background with extensive use of Pho
 ## Trello link: https://trello.com/b/HcO9mFGQ/piclist
 
 ## Technologies Used:
-Languages - HTML5, CSS3, Javascript
+Languages - HTML5, CSS3, Javascript,
+
 Design - Animista.net, Bootstrap.
+
 Software - Visual Studio, PhotoShop, Handlebars, Express, NodeJS, MongoDB, Mongoose, and Google, Google and more Google.
 
 ## Project Planning & User Stories - Trello
 Wireframe by Figma
+
 ERD by LucidChart
 
 ## Version 2
 More animations
+
 Better text style
+
 Optimized for mobile
+
 Click images to add to equipment list and populate shelves
 
 
