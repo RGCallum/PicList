@@ -116,7 +116,7 @@ const anniversary = new Event({
 })
 
 const formal = new Event({
-    name: "Wallace Sweet16",
+    name: "Wallace Sweet 16",
     date: "05-20-19",
     time: "8pm",
     location: "Brooklyn",
