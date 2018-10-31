@@ -2,17 +2,17 @@
 
 
   <h2>Available {{equipment.name}} </h2>
-  <h2>{{equipment.available}}</h2>
-
-  
-
+  <h2>quantity: {{equipment.available}}</h2>
+  <img src="{{equipment.image}}">
 
 
-    <br>
-    <br>
+
+
+  <br>
+  <br>
   <form action="/equipments/{{equipment._id}}/edit" method="PATCH">
     <button>Edit Equipment</button>
-</form>
-<br>
-<a href="/equipments"><button>Back to list</button></a>
+  </form>
+  <br>
+  <a href="/equipments"><button>Back to list</button></a>
 </main>

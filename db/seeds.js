@@ -8,64 +8,83 @@ const mongoose = require('./connection')
 
 const Cameras = new Equipment({
     name: "Cameras",
-    available: 4
+    available: 4,
+    image: "/images/camera.png"
 })
 
 const LightKits = new Equipment({
     name: "Light Kits",
-    available: 5
+    available: 5,
+    image: "/images/lightKit.png"
+
 
 })
 
 const Tripods = new Equipment({
     name: "Tripods",
-    available: 4    
+    available: 4,
+    image: "/images/tripod.png"
+    
 })
 
 const Lenses = new Equipment({
     name: "Lenses",
-    available: 14
+    available: 14,
+    image: "/images/lenses.png"
+
 
 })
 
 const Reflectors = new Equipment({
     name: "Reflectors",
-    available: 3
+    available: 15,
+    image: "/images/reflectors.png"
+
 
 })
 
 const Printers = new Equipment({
     name: "Printers",
-    available: 4
+    available: 4,
+    image: "/images/printer.png"
+
 })
 
 const ExtensionCords = new Equipment({
     name: "Extension Cords",
-    available: 24
+    available: 24,
+    image: "/images/extensionCord.png"
+
 
 })
 const Sandbags = new Equipment({
     name: "Sandbags",
-    available: 30
+    available: 30,
+    image: "/images/sandbags.png"
+
 
 })
 const Backdrops = new Equipment({
     name: "Backdrops",
-    available: 10
-
-})
-
-const Gels = new Equipment({
-    name: "Gels",
-    available: 30
+    available: 10,
+    image: "/images/backdrops.png"
 
 })
 
 const Computers = new Equipment({
     name: "Computers",
-    available: 10
+    available: 10,
+    image: "/images/macs.png"
 
 })
+
+const Gels = new Equipment({
+    name: "Gels",
+    available: 30,
+    image: "/images/gels.png"
+
+})
+
 
 const wedding = new Event({
     name: "Johnson Wedding",
@@ -152,7 +171,7 @@ User.remove({})
     .then(() => Event.remove({}))
     .then(() => Equipment.remove({}))
     .then(() => Event.insertMany([wedding, reunion, anniversary, casual, formal]))
-    .then(() => Equipment.insertMany([Cameras, LightKits, Tripods, Lenses, Reflectors, Printers, ExtensionCords, Sandbags, Backdrops, Gels, Computers]))
+    .then(() => Equipment.insertMany([Cameras, LightKits, Tripods, Lenses, Reflectors, Printers, ExtensionCords, Sandbags, Backdrops, Computers, Gels]))
     .then(() => user1.save())
     .then(() => user2.save())
     .then(() => user3.save())

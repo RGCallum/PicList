@@ -3,7 +3,8 @@ const Schema = mongoose.Schema
 
 const Equipment = new Schema({
     name: String,
-    available: Number
+    available: Number,
+    image: String
 })
 
 module.exports = mongoose.model('Equipment', Equipment)

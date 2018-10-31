@@ -2,7 +2,7 @@
 <main>
 <div>
 </div>
-<h2> <i> Photographers:</i></h2>   
+<h2> Photographers:</h2>   
 {{#each users}}
 
         <h3>
@@ -20,7 +20,7 @@
 
     {{/each}}
     <br>
-<h3><i>Sign In</i></h3>
+<h3>Sign In</h3>
 <form action="/users{{users_id}}" method="POST" class="auth-form">
   <input type="email" name="email" placeholder="Email">
   <input type="password" name="password" placeholder="Password">
@@ -28,7 +28,7 @@
 </form>
 <br>
 
-	<h3> <i>New to the Team?</i></h3>
+	<h3> New to the Team?</h3>
 <a href="/users/new/"><button>Sign Up</button></a> 
 
 </main>
