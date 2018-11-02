@@ -86,12 +86,10 @@ main{
   display: block;
   z-index: 2;
   position: absolute;
-  margin-left: 0%;
-  margin-top: -10%;
-  width: 100vw;
+  width: 101vw;
   height: 100vh;
   margin-left: 0%;
-  margin-top: -7.3%;
+  margin-top: -7.5%;
   animation: slide-left 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation-delay: 3s;
 }
@@ -112,8 +110,8 @@ main{
   position: absolute;
   width: 101vw;
   height: 100vh;
-  margin-left: -1%;
-  margin-top: -7.3%;
+  margin-left: 0%;
+  margin-top: -7.5%;
   animation: slide-right 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation-delay: 3s;
 
