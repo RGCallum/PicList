@@ -55,7 +55,7 @@ main{
   border-radius: 5px;
   border: inset 3px;
   box-shadow: 1px 1px 1px black;
-  animation: slide-out-bck-center 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-out-bck-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation-play-state: paused;
   
 }
