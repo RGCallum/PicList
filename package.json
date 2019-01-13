@@ -1,6 +1,9 @@
 {
   "name": "piclist",
   "version": "0.0.0",
+  "engines": {
+    "node": "11.3.0"
+  },
   "private": true,
   "main": "app.js",
   "scripts": {
