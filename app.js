@@ -41,10 +41,4 @@ app.use(function(err, req, res, next) {
 });
 
 
-var myName;
-var myTemplate = $('#myTempId').html();
-var compiled = Handlebars.compile(myTemplate);
-
-
-
 module.exports = app;
