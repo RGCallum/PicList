@@ -4,6 +4,7 @@ body {
   color: rgb(254, 254, 254);
   background-image: url(/images/dramaticCloset1light.png);
   background-size: cover;
+  height: 100vh;
   background-repeat: no-repeat;
   background-position: center 25%;
   z-index: 2;
@@ -43,19 +44,24 @@ main{
 #h4Text{
   font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: rgb(255, 255, 255);
-  margin-left: 32%;
+  margin-top: 10%;
+  margin-left: 38%;
   padding: 8px;
   z-index: 100;
-  position: absolute;
-  animation: slide-left 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation-delay: 3s;
+  position: fixed;
+  justify-content: center;
   background-image: radial-gradient(ellipse farthest-corner at right bottom, rgb(177, 152, 41) 0%, rgb(169, 127, 42) 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, rgb(201, 201, 137) 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);     
   border-radius: 5px;
   border: inset 3px;
   box-shadow: 1px 1px 1px black;
-
+  animation: slide-out-bck-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation-play-state: paused;
+  
 }
+
+
+
 
 #h4Text2{
   font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -64,16 +70,24 @@ main{
   padding: 8px;
   z-index: 100;
   position: absolute;
-  animation: slide-right 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation-delay: 3s;
   background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);     border-radius: 5px;
   border: inset 3px;
   box-shadow: 1px 1px 1px black;
-
+  animation: slide-out-bck-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation-delay: 3s;
 }
 
-
+@keyframes slide-out-bck-center {
+  0% {
+            transform: translateZ(0);
+    opacity: 1;
+  }
+  100% {
+            transform: translateZ(-1100px);
+    opacity: 0;
+  }
+}
 
 #enterBtn{
   z-index: 100;
@@ -85,14 +99,17 @@ main{
 #doorLeft{
   display: block;
   z-index: 2;
-  position: absolute;
+  position: fixed;
   width: 101vw;
-  height: 100vh;
+  height: 110vh;
+  background-size: cover;
   margin-left: 0%;
   margin-top: -7.5%;
-  animation: slide-left 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation-delay: 3s;
+  animation: slide-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-play-state: paused; 
+
 }
+
 
 
 @keyframes slide-left {
@@ -108,12 +125,14 @@ main{
   display: block;
   z-index: 2;
   position: absolute;
+  background-size: cover;
+
   width: 101vw;
-  height: 100vh;
+  height: 110vh;
   margin-left: 0%;
   margin-top: -7.5%;
-  animation: slide-right 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation-delay: 3s;
+  animation: slide-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-play-state: paused; 
 
 }
 
@@ -126,19 +145,33 @@ main{
   }
 }
 
-.nav{
-  display: inline-flex;
-  justify-content: space-around;
-  background-color: rgba(60, 60, 60, 0.386);
-  border-radius: 5px;
-  /* border: inset 2px; */
-  z-index: 10;
-  color: rgb(255, 255, 255);
-  position: relative;
-  animation: fade-in-top .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+@media only screen and (min-width: 1675px){
+  #doorLeft, #doorRight {
+    margin-top: -5.5%;
+  }
+  }
+
+#doorRight:hover, #doorLeft:hover, #h4Text:hover {
+animation-play-state: running;
 }
 
 
+
+
+.nav{
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100vw;
+  background-color: rgba(60, 60, 60, 0.386);
+  border-radius: 5px;
+  /* border: inset 2px; */
+  z-index: -10;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  /* animation: fade-in-top .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both; */
+}
+
+/* 
 @keyframes fade-in-top {
   0% {
             transform: translateY(-50px);
@@ -148,7 +181,7 @@ main{
             transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 a {
   color: rgb(255, 255, 255);
 }
